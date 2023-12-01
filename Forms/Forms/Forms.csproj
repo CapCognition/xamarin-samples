@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CapCognition" Version="1.0.0" />
+    <PackageReference Include="CapCognition.LicensePlateDetection" Version="1.0.0" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\BarcodeMainPage.xaml.cs">
+      <DependentUpon>BarcodeMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CameraMainPage.xaml.cs">
+      <DependentUpon>CameraMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LPRMainPage.xaml.cs">
+      <DependentUpon>LPRMainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+</Project>

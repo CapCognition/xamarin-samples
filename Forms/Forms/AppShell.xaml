@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Forms.Views"
+       Title="Forms"
+       x:Class="Forms.AppShell"
+       FlyoutBackgroundColor="{StaticResource Background}"
+       FlyoutBackdrop="#80000000"
+       BackgroundColor="{StaticResource Primary}"
+       ForegroundColor="White"
+       TitleColor="White">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid Padding="10">
+                <Image Source="Logo.png" 
+                       HeightRequest="50" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem Title="Camera">
+        <ShellContent Route="CameraMainPage" ContentTemplate="{DataTemplate local:CameraMainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Barcode">
+        <ShellContent Route="BarcodeMainPage" ContentTemplate="{DataTemplate local:BarcodeMainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="License Plate recognition">
+        <ShellContent Route="LPRMainPage" ContentTemplate="{DataTemplate local:LPRMainPage}" />
+    </FlyoutItem>
+</Shell>
