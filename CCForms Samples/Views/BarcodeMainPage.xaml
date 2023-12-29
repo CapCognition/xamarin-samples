@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:CapCognition.Shared;assembly=CapCognition"
+             x:Class="CCForms_Samples.Views.BarcodeMainPage"
+             BackgroundColor="{StaticResource Background}">
+    <ContentPage.Content>
+
+        <Grid>
+            <shared:RecognitionView
+                x:Name="RecognitionView"
+                AutoStartRecognition="False"
+                AutoOpenCamera="False"
+                AutoSelectClosestCaptureResolutionWidth="1920"
+                AutoSelectClosestPreviewResolutionWidth="1920"
+                UseFrontCamera="False"
+                FillPreviewToView="True"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

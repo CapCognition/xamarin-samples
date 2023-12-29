@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCForms_Samples.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#55afd5</Color>
+            <Color x:Key="TextColorOnDark">#eeeeee</Color>
+            <Color x:Key="PrimaryTransparent">#9955afd5</Color>
+            <Color x:Key="Background">#222222</Color>
+
+            <Style TargetType="Label" x:Key="TitleLabel">
+                <Setter Property="TextColor" Value="{StaticResource TextColorOnDark}"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+
+            <Style TargetType="Button" x:Key="DefaultButton">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="BorderColor" Value="{StaticResource Primary}"></Setter>
+                <Setter Property="BorderWidth" Value="1"></Setter>
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

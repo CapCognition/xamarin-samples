@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:CapCognition.Shared;assembly=CapCognition"
+             xmlns:views="clr-namespace:CCForms_Samples.Views;assembly=CCForms Samples"
+             x:Class="CCForms_Samples.Views.CameraSinglePage"
+             BackgroundColor="{StaticResource Background}"
+             x:DataType="views:CameraSinglePage">
+    <ContentPage.Content>
+
+        <Grid
+            RowDefinitions="50,*,100"
+            ColumnDefinitions="50,50,*,50,50">
+
+            <shared:ImageCaptureView 
+                x:Name="CaptureView"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                AutoStartCapturing="False"
+                AutoOpenCamera="False"
+                AutoSelectClosestCaptureResolutionWidth="1920"
+                AutoSelectClosestPreviewResolutionWidth="1920"
+                UseFrontCamera="False"
+                FillPreviewToView="True"/>
+
+            <!--Preview Of Captured Image-->
+            <Image                 
+                x:Name="PreviewImage"
+                Grid.Row="1"
+                Grid.Column="3"
+                Grid.ColumnSpan="2"
+                HeightRequest="100"
+                WidthRequest="100"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Source="{Binding CapturedImageSource}"/>
+
+            <!--Top Left Toggle Flash-->
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="0"
+                Source="flash.png"
+                Clicked="OnToggleTorch"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                WidthRequest="50"
+                HeightRequest="50"
+                Opacity="{Binding FlashOpacity}"
+                Margin="5"/>
+
+            <!--Top Right Toggle Camera-->
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="4"
+                BackgroundColor="Transparent"
+                Clicked="OnChangeCamera"
+                Source="changeCamera.png"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                WidthRequest="50"
+                HeightRequest="50"
+                Margin="5"/>
+
+            <!--Bottom Center Capture-->
+            <ImageButton
+                x:Name="CaptureButton"
+                Grid.Row="2"
+                Grid.Column="2"
+                Pressed="CaptureButton_OnPressed"
+                Released="CaptureButton_OnReleased"
+                Clicked="OnTakePhotoClicked"
+                BackgroundColor="Transparent"
+                Source="takePicture.png"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                WidthRequest="100"
+                HeightRequest="100"
+                Margin="10"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

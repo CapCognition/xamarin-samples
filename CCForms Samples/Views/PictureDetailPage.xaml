@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:CCForms_Samples.Views;assembly=CCForms Samples"
+             x:Class="CCForms_Samples.Views.PictureDetailPage"
+             BackgroundColor="{StaticResource Background}"
+             x:DataType="views:PictureDetailPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <!--Preview Of Captured Image-->
+            <Image                 
+                x:Name="PreviewImage"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Aspect="AspectFit"
+                Source="{Binding CapturedImage}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
