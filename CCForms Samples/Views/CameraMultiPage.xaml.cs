@@ -5,7 +5,6 @@ using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Image = Xamarin.Forms.Image;
 
 namespace CCForms_Samples.Views
 {
